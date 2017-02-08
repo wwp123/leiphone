@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--PC端访问优先使用IE最新版本和Chrome-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="telephone=no" name="format-detection">
+<title>列表页</title>
+<link href="style/layout.css" rel="stylesheet" type="text/css" />
+<link href="style/themes.css" rel="stylesheet" type="text/css" />
+<link href="style/master.css" rel="stylesheet" type="text/css" />
+<link href="style/new.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="style/font-awesome.min.css"/>
+
+<script src="javascript/less-1.7.3.min.js"></script>
+<script src="javascript/vendor/modernizr.js"></script>
+<script src="javascript/vendor/jquery.js"></script>
+<script src="javascript/AppendAround.js"></script><!--屏幕切换时，变换模块的位置的JS-->
+</head>
+<body>
+<div id="layout">
+<div class="wrapper" id="frame_wrapper">
+  <div class="header" id="frame_header" include="include.html">
+  	<div class="tool-bar tool-top" id="frame_tool_bar">
+        <div class="row clearfix" id="frame_tb_row">
+            <div id="frame_main_site" class="left left-toolbox">
+                <div class="drop-bar" id="drop-bar1">
+                	<ul>
+                		<li><a href="index.html">首页</a></li>
+                        <li><a href="#">硬创邦</a></li>
+                        <li><a href="#">爱搞机</a></li>
+                        <li><a href="#">产品</a></li>
+                        <li><a href="#">试用</a></li>
+                        <li><a href="#">极客购</a></li>
+                        <li><a href="#">活动</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="frame_main_site2" class="right right-toolbox hide-for-small">
+            	<a href="#" class="message"><i class="fa fa-bell-o"></i></a>
+            </div>
+            <div class="tool-top" data-set="menu_addr_2" id="frame_tool_top">
+            	<div class="dropdown right" id="dropdown">
+                    <a data-dropdown="drop1" aria-controls="drop1" aria-expanded="false"><i class="fa fa-user fa-fw"></i>用户 <i class="fa fa-angle-down"></i></a>
+                    <ul id="drop1" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+                      <li><a href="#">注册</a></li>
+                      <li><a href="#">登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row collapse" id="frame_header_row1">
+      <div class="large-12" id="frame_header_col1">
+        <nav class="top-bar" data-topbar role="navigation" id="frame_top_bar">
+          <ul class="title-area">
+            <li class="name left">
+              <div class="logo"><img src="images/igao7_logo.png" alt="爱搞机"/></div>
+            </li>
+            <li class="user"><div class="append-aside" data-set="menu_addr_2"><!--小屏下append过来的内容在这里--></div></li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+          </ul>
+          <section class="top-bar-section"> 
+              <ul class="left">
+                  <li class="active"><a href="index.html">首页</a></li>
+                  <li><a href="javascript:void(0)">评测</a></li>
+                  <li><a href="javascript:void(0)">观机</a></li>
+                  <li><a href="javascript:void(0)">TV</a></li>
+                  <li><a href="javascript:void(0)">跑分</a></li>
+                  <li><a href="javascript:void(0)">91拆</a></li>
+              </ul>
+              <ul class="right">
+                  <li class="has-form">
+                    <div class="search" id="search" role="search">
+                        <form >
+                          <input name="" class="inp" id="topsearch" type="text" placeholder="输入查询内容" accesskey="s" title="输入查询内容" x-webkit-speech="" x-webkit-grammar="builtin:translate" lang="zh-CN">
+                          <!--<span onClick="showSearch()"></span>-->
+                          <i class="fa fa-2x fa-search" onClick="showSearch()" title="搜索"></i>
+                        </form>
+                    </div>
+                  </li>
+               </ul>
+          </section>
+          
+        </nav>
+      </div>
+        <div id="frame_appendjs">
+			<script>
+			$( "#dropdown" ).appendAround();
+			  
+            </script>
+       </div>
+    </div>
+  </div>
+  <!--end header-->
+  
+  <div class="main" role="main" aria-label="主体区块" id="frame_main">
+   <div class="row" id="frame_main_row2">
+    	<div class="large-8 medium-12 small-12 columns" id="frame_main_col1" role="complementary" aria-label="左边区域">
+        	<div class="mod-list" id="frame_modlist">
+                <div class="list-box" id="frame_listbox">
+                	<div class="auto_list" id="data_autolist_1">
+                    <ul class="title">
+                      <li> 
+                          <div class="userpre">
+                            <div class="list_img"><img src="images/5699cfb2e6105.jpg" class="avatar_img" alt="iPhone"></div>
+                            <div class="list_title"><a href="article.html">iPhone删除预装软件要交750元？</a></div>
+                            <div class="list_des"><span>现在iOS 9.3已经可让用户删除iPhone预装程序，但前提是用户需要先交79英镑。</span></div>
+                            <div class="user-info">
+                              <div class="aut">
+                              	<a href="#"><img src="images/55dfc4a38f126_100_100.jpg" alt="xxx"/></a>
+                                <span>xxx</span>
+                              </div>
+                              <div class="cmt"><a href="#"><i class="fa fa-comment fa-fw"></i><span>9</span></a></div>
+                              <div class="list_time"><span>2016/01/17</span><span class="s_hide"> 07:21</span></div>
+                            </div>
+                        </div> 
+                      </li>
+                      <li> 
+                          <div class="userpre">
+                            <div class="list_img"><img src="images/3.jpg" class="avatar_img" alt="iPhone"></div>
+                            <div class="list_title"><a href="article.html">iPhone删除预装软件要交750元？</a></div>
+                            <div class="list_des"><span>现在iOS 9.3已经可让用户删除iPhone预装程序，但前提是用户需要先交79英镑。</span></div>
+                            <div class="user-info">
+                              <div class="aut">
+                              	<a href="#"><img src="images/55dfc4a38f126_100_100.jpg" alt="xxx"/></a>
+                                <span>xxx</span>
+                              </div>
+                              <div class="cmt"><a href="#"><i class="fa fa-comment fa-fw"></i><span>9</span></a></div>
+                              <div class="list_time"><span>2016/01/17</span><span class="s_hide"> 07:21</span></div>
+                            </div>
+                        </div> 
+                      </li>
+                      <li> 
+                          <div class="userpre">
+                            <div class="list_img"><img src="images/569b9a78023ff.jpg" class="avatar_img" alt="iPhone"></div>
+                            <div class="list_title"><a href="article.html">iPhone删除预装软件要交750元？</a></div>
+                            <div class="list_des"><span>现在iOS 9.3已经可让用户删除iPhone预装程序，但前提是用户需要先交79英镑。</span></div>
+                            <div class="user-info">
+                              <div class="aut">
+                              	<a href="#"><img src="images/55dfc4a38f126_100_100.jpg" alt="xxx"/></a>
+                                <span>xxx</span>
+                              </div>
+                              <div class="cmt"><a href="#"><i class="fa fa-comment fa-fw"></i><span>9</span></a></div>
+                              <div class="list_time"><span>2016/01/17</span><span class="s_hide"> 07:21</span></div>
+                            </div>
+                        </div> 
+                      </li>
+                      <li> 
+                          <div class="userpre">
+                            <div class="list_img"><img src="images/5699cfb2e6105.jpg" class="avatar_img" alt="iPhone"></div>
+                            <div class="list_title"><a href="article.html">iPhone删除预装软件要交750元？</a></div>
+                            <div class="list_des"><span>现在iOS 9.3已经可让用户删除iPhone预装程序，但前提是用户需要先交79英镑。</span></div>
+                            <div class="user-info">
+                              <div class="aut">
+                              	<a href="#"><img src="images/55dfc4a38f126_100_100.jpg" alt="xxx"/></a>
+                                <span>xxx</span>
+                              </div>
+                              <div class="cmt"><a href="#"><i class="fa fa-comment fa-fw"></i><span>9</span></a></div>
+                              <div class="list_time"><span>2016/01/17</span><span class="s_hide"> 07:21</span></div>
+                            </div>
+                        </div> 
+                      </li>
+                      <li> 
+                          <div class="userpre">
+                            <div class="list_img"><img src="images/5699cfb2e6105.jpg" class="avatar_img" alt="iPhone"></div>
+                            <div class="list_title"><a href="article.html">iPhone删除预装软件要交750元？</a></div>
+                            <div class="list_des"><span>现在iOS 9.3已经可让用户删除iPhone预装程序，但前提是用户需要先交79英镑。</span></div>
+                            <div class="user-info">
+                              <div class="aut">
+                              	<a href="#"><img src="images/55dfc4a38f126_100_100.jpg" alt="xxx"/></a>
+                                <span>xxx</span>
+                              </div>
+                              <div class="cmt"><a href="#"><i class="fa fa-comment fa-fw"></i><span>9</span></a></div>
+                              <div class="list_time"><span>2016/01/17</span><span class="s_hide"> 07:21</span></div>
+                            </div>
+                        </div> 
+                      </li>
+                      <li> 
+                          <div class="userpre">
+                            <div class="list_img"><img src="images/5699cfb2e6105.jpg" class="avatar_img" alt="iPhone"></div>
+                            <div class="list_title"><a href="article.html">iPhone删除预装软件要交750元？</a></div>
+                            <div class="list_des"><span>现在iOS 9.3已经可让用户删除iPhone预装程序，但前提是用户需要先交79英镑。</span></div>
+                            <div class="user-info">
+                              <div class="aut">
+                              	<a href="#"><img src="images/55dfc4a38f126_100_100.jpg" alt="xxx"/></a>
+                                <span>xxx</span>
+                              </div>
+                              <div class="cmt"><a href="#"><i class="fa fa-comment fa-fw"></i><span>9</span></a></div>
+                              <div class="list_time"><span>2016/01/17</span><span class="s_hide"> 07:21</span></div>
+                            </div>
+                        </div> 
+                      </li>
+                      <li> 
+                          <div class="userpre">
+                            <div class="list_img"><img src="images/5699cfb2e6105.jpg" class="avatar_img" alt="iPhone"></div>
+                            <div class="list_title"><a href="article.html">iPhone删除预装软件要交750元？</a></div>
+                            <div class="list_des"><span>现在iOS 9.3已经可让用户删除iPhone预装程序，但前提是用户需要先交79英镑。</span></div>
+                            <div class="user-info">
+                              <div class="aut">
+                              	<a href="#"><img src="images/55dfc4a38f126_100_100.jpg" alt="xxx"/></a>
+                                <span>xxx</span>
+                              </div>
+                              <div class="cmt"><a href="#"><i class="fa fa-comment fa-fw"></i><span>9</span></a></div>
+                              <div class="list_time"><span>2016/01/17</span><span class="s_hide"> 07:21</span></div>
+                            </div>
+                        </div> 
+                      </li>
+                      <li> 
+                          <div class="userpre">
+                            <div class="list_img"><img src="images/5699cfb2e6105.jpg" class="avatar_img" alt="iPhone"></div>
+                            <div class="list_title"><a href="article.html">iPhone删除预装软件要交750元？</a></div>
+                            <div class="list_des"><span>现在iOS 9.3已经可让用户删除iPhone预装程序，但前提是用户需要先交79英镑。</span></div>
+                            <div class="user-info">
+                              <div class="aut">
+                              	<a href="#"><img src="images/55dfc4a38f126_100_100.jpg" alt="xxx"/></a>
+                                <span>xxx</span>
+                              </div>
+                              <div class="cmt"><a href="#"><i class="fa fa-comment fa-fw"></i><span>9</span></a></div>
+                              <div class="list_time"><span>2016/01/17</span><span class="s_hide"> 07:21</span></div>
+                            </div>
+                        </div> 
+                      </li>
+                      <li> 
+                          <div class="userpre">
+                            <div class="list_img"><img src="images/5699cfb2e6105.jpg" class="avatar_img" alt="iPhone"></div>
+                            <div class="list_title"><a href="article.html">iPhone删除预装软件要交750元？</a></div>
+                            <div class="list_des"><span>现在iOS 9.3已经可让用户删除iPhone预装程序，但前提是用户需要先交79英镑。</span></div>
+                            <div class="user-info">
+                              <div class="aut">
+                              	<a href="#"><img src="images/55dfc4a38f126_100_100.jpg" alt="xxx"/></a>
+                                <span>xxx</span>
+                              </div>
+                              <div class="cmt"><a href="#"><i class="fa fa-comment fa-fw"></i><span>9</span></a></div>
+                              <div class="list_time"><span>2016/01/17</span><span class="s_hide"> 07:21</span></div>
+                            </div>
+                        </div> 
+                      </li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="topic-footer footer-btn clearfix" id="frame_topic_footer">
+                    <div class="row" id="frame_topic_row1">
+                        <div class="large-6 medium-6 small-6 columns" id="frame_topic_col1">
+                            <div class="button secondary expand">上一页</div>
+                        </div>
+                        <div class="large-6 medium-6 small-6 columns" id="frame_topic_col2">
+                            <div class="button alert expand">下一页</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="large-4 medium-12 small-12 columns" id="frame_main_col2" role="complementary" aria-label="右边区域">
+        	<aside id="frame_aside">
+        	<div id="frame_user_login_info" class="right-box">
+            	<div class="large-12 medium-6 small-12 columns medium-padding-r" id="frame_r1">
+                <div class="mod-rec-m2 calc" id="mod_1">
+                  <div class="modhead">
+                    <div class="modtitle">
+                      <h3><a href="#">雷锋日历</a></h3>
+                    </div>
+                  </div>
+                  <div class="modcon auto_list">
+                  	<ul>
+                    	<li>
+                            <div class="label secondary"><span class="r">14</span>/<span class="y">12月</span></div>
+                        	<a href="#">
+                                <div class="title"><span>【锋神榜】2015年度雷锋网十佳评选</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="label secondary"><span class="r">13</span>/<span class="y">1月</span></div>
+                        	<a href="#">
+                                <div class="title"><span>【锋神榜】2015年度雷锋网十佳评选</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="label secondary"><span class="r">12</span>/<span class="y">2月</span></div>
+                        	<a href="#">
+                                <div class="title"><span>【锋神榜】2015年度雷锋网十佳评选</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="label secondary"><span class="r">11</span>/<span class="y">10月</span></div>
+                        	<a href="#">
+                                <div class="title"><span>【锋神榜】2015年度雷锋网十佳评选</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="label secondary"><span class="r">10</span>/<span class="y">12月</span></div>
+                        	<a href="#">
+                                <div class="title"><span>【锋神榜】2015年度雷锋网十佳评选</span></div>
+                            </a>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+                </div>
+                <div class="large-12 medium-6 small-12 columns medium-padding-l" id="frame_r2">
+                <div class="mod-rec-m2 vip" id="mod_2">
+                  <div class="modhead">
+                    <div class="modtitle">
+                      <h3><a href="#" class="left">会员换购</a></h3>
+                    </div>
+                    <div class="modmore">
+                    	<a href="javascript:;"><i class="fa fa-refresh" id="reflash"></i></a>
+                    </div>
+                  </div>
+                  <div class="modcon auto_list">
+                  	<ul class="change_1">
+                    	<li class="img-mar">
+                        	<a href="#">
+                            	<img src="images/563b17af898e8.png" alt="1"/>
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#">
+                            	<img src="images/563b17af898e8.png" alt="2"/>
+                            </a>
+                        </li>
+                        <li class="img-mar">
+                        	<a href="#">
+                            	<img src="images/563b17af898e8.png" alt="3"/>
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#">
+                            	<img src="images/563b17af898e8.png" alt="4"/>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="change_2">
+                    	<li class="img-mar">
+                        	<a href="#">
+                            	<img src="images/5699cfb2e6105.jpg" alt="1"/>
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#">
+                            	<img src="images/5699cfb2e6105.jpg" alt="2"/>
+                            </a>
+                        </li>
+                        <li class="img-mar">
+                        	<a href="#">
+                            	<img src="images/5699cfb2e6105.jpg" alt="3"/>
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#">
+                            	<img src="images/5699cfb2e6105.jpg" alt="4"/>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tg"><span>本栏目由极客购提供</span></div>
+                  </div>
+                </div>
+                </div>
+            </div>
+            
+        </aside>
+        </div>
+    </div>   
+  </div>
+  <!--end main-->
+  
+  <div class="footer" id="frame_footer" role="contentinfo" include="include.html">
+    <div class="subnav clearfix" id="frame_footer_subnav">
+       <div class="row margin-b hide-for-small clearfix" id="frame_footer_1">
+          <div class="left" id="data_subnav_1"> 
+            <img src="images/lph-footer-logo.png" alt="雷锋网"/>
+          </div>
+          <div class="right" id="data_subnav_2"> 
+            <a href="#">联系我们</a><span>|</span>
+            <a href="#">关于我们</a><span>|</span>
+            <a href="#">投稿</a><span>|</span>
+            <a href="#">加入我们</a>
+            <a href="#" class="weibo"></a>
+            <a href="#" class="youxiang"></a>
+          </div>
+       </div>
+       <div class="row margin-t margin-b" id="frame_footer_2">
+            <div class="link" id="frame_footer_link">
+                <div class="youqing"><p class="left">友情链接：</p></div>
+                <a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a>
+            </div>
+    	</div>
+    </div>
+    <!---->
+    <div class="copyright" id="frame_footer_copyright">
+        <div class="row" id="data_copyright"> Copyright © 2013-2015  www.xxxxx.com</div>
+    </div>
+  </div>
+  <!--end footer--> 
+  <div id="frame_go"><div class="go"><a title="返回顶部" class="gotop" id="goTop"></a> <a title="返回底部" class="gobottom" id="goBottom"></a></div></div>
+  <div id="frame_javascript">
+  	<div id="data_javascript">
+		<script src="javascript/foundation.min.js"></script> 
+        <script src="javascript/main.js"></script>
+        <script src="javascript/others.js"></script>
+
+		<script>
+		  $('#reflash').on('click',function(){
+			  $('.change_1').toggle();
+			  $('.change_2').toggle();  
+		  });
+		  $(document).foundation();
+		</script>
+    </div>
+  </div>
+</div>
+</div>
+
+
+</body>
+</html>

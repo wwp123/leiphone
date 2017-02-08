@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--PC端访问优先使用IE最新版本和Chrome-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="telephone=no" name="format-detection">
+<title>图片列表页</title>
+<link href="style/themes.less" rel="stylesheet" type="text/less" />
+<link href="style/layout.css" rel="stylesheet" type="text/css" />
+<link href="style/master.css" rel="stylesheet" type="text/css" />
+<link href="style/new.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="style/font-awesome.min.css"/>
+<script src="javascript/less-1.7.3.min.js"></script>
+<script src="javascript/vendor/modernizr.js"></script>
+<script src="javascript/vendor/jquery.js"></script>
+<script src="javascript/AppendAround.js"></script><!--屏幕切换时，变换模块的位置的JS-->
+</head>
+<body>
+<div id="layout">
+<div class="wrapper" id="frame_wrapper">
+  <div class="header" id="frame_header" include="include.html">
+  	<div class="tool-bar tool-top" id="frame_tool_bar">
+        <div class="row clearfix" id="frame_tb_row">
+            <div id="frame_main_site" class="left left-toolbox">
+                <div class="drop-bar" id="drop-bar1">
+                	<ul>
+                		<li><a href="index.html">首页</a></li>
+                        <li><a href="#">硬创邦</a></li>
+                        <li><a href="#">爱搞机</a></li>
+                        <li><a href="#">产品</a></li>
+                        <li><a href="#">试用</a></li>
+                        <li><a href="#">极客购</a></li>
+                        <li><a href="#">活动</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="frame_main_site2" class="right right-toolbox hide-for-small">
+            	<a href="#" class="message"><i class="fa fa-bell-o"></i></a>
+            </div>
+            <div class="tool-top" data-set="menu_addr_2" id="frame_tool_top">
+            	<div class="dropdown right" id="dropdown">
+                    <a data-dropdown="drop1" aria-controls="drop1" aria-expanded="false"><i class="fa fa-user fa-fw"></i>用户 <i class="fa fa-angle-down"></i></a>
+                    <ul id="drop1" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+                      <li><a href="#">注册</a></li>
+                      <li><a href="#">登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row collapse" id="frame_header_row1">
+      <div class="large-12" id="frame_header_col1">
+        <nav class="top-bar" data-topbar role="navigation" id="frame_top_bar">
+          <ul class="title-area">
+            <li class="name left">
+              <div class="logo"><img src="images/igao7_logo.png" alt="爱搞机"/></div>
+            </li>
+            <li class="user"><div class="append-aside" data-set="menu_addr_2"><!--小屏下append过来的内容在这里--></div></li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+          </ul>
+          <section class="top-bar-section"> 
+              <ul class="left">
+                  <li class="active"><a href="index.html">首页</a></li>
+                  <li><a href="javascript:void(0)">评测</a></li>
+                  <li><a href="javascript:void(0)">观机</a></li>
+                  <li><a href="javascript:void(0)">TV</a></li>
+                  <li><a href="javascript:void(0)">跑分</a></li>
+                  <li><a href="javascript:void(0)">91拆</a></li>
+              </ul>
+              <ul class="right">
+                  <li class="has-form">
+                    <div class="search" id="search" role="search">
+                        <form >
+                          <input name="" class="inp" id="topsearch" type="text" placeholder="输入查询内容" accesskey="s" title="输入查询内容" x-webkit-speech="" x-webkit-grammar="builtin:translate" lang="zh-CN">
+                          <!--<span onClick="showSearch()"></span>-->
+                          <i class="fa fa-2x fa-search" onClick="showSearch()" title="搜索"></i>
+                        </form>
+                    </div>
+                  </li>
+               </ul>
+          </section>
+          
+        </nav>
+      </div>
+        <div id="frame_appendjs">
+			<script>
+			$( "#dropdown" ).appendAround();
+			  
+            </script>
+       </div>
+    </div>
+  </div>
+  <!--end header-->
+  
+  <div class="main" role="main" aria-label="主体区块" id="frame_main">
+  	<div class="row small-padding" id="frame_row_1">
+    	<div class="columns large-12 picList" id="frame_picList_1">
+        	<div class="topic-box" id="data_topic-box1">
+                <div class="topic-head">
+                	<div class="topic-title">
+                    	<h2>鹅眼</h2>
+                    </div>
+                </div>
+                <div class="topic-con">
+                	<div class="row">
+                    	<div class="columns large-6 medium-12 small-12">
+                        	<a href="pic_article.html"><img src="images/130565745.jpg" alt="2015年我参加了15场婚礼"/></a>
+                            <div class="tip"><span>2015年我参加了15场婚礼</span></div>
+                        </div>
+                        <div class="columns large-6 medium-12 small-12">
+                        	<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2" data-equalizer="foo">
+                                <li>
+                                	<img src="images/130565897.jpg" alt="辽宁大面积违规种植转基因玉米"/>
+                                    <div class="tip"><span>辽宁大面积违规种植转基因玉米</span></div>
+                                </li>
+                                <li>
+                                	<img src="images/130565961.jpg" alt="南沙永暑礁填海造陆记"/>
+                                    <div class="tip"><span>南沙永暑礁填海造陆记</span></div>
+                                </li>
+                            </ul>
+                            <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2" data-equalizer="foo">
+                                <li>
+                                	<img src="images/130566043.jpg" alt="工科小伙4年'追星'路"/>
+                                    <div class="tip"><span>工科小伙4年"追星"路</span></div>
+                                </li>
+                                <li>
+                                	<img src="images/130566152.jpg" alt="舌尖上的海鲜哪里来"/>
+                                    <div class="tip"><span>舌尖上的海鲜哪里来</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="topic-footer">
+                    <div class="btn-more"><a href="list.html" title="查看更多图片">查看更多</a></div>
+                </div>
+            </div>
+        </div>
+    </div>   
+    <div class="row small-padding" id="frame_row_2">
+    	<div class="columns large-12 picList" id="frame_picList_2">
+        	<div class="topic-box" id="data_topic-box2">
+                <div class="topic-head">
+                	<div class="topic-title">
+                    	<h2>鹅眼</h2>
+                    </div>
+                </div>
+                <div class="topic-con">
+                	<div class="row">
+                    	<div class="columns large-6 medium-12 small-12">
+                        	<img src="images/130565745.jpg" alt="2015年我参加了15场婚礼"/>
+                            <div class="tip"><span>2015年我参加了15场婚礼</span></div>
+                        </div>
+                        <div class="columns large-6 medium-12 small-12">
+                        	<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2" data-equalizer="foo">
+                                <li>
+                                	<img src="images/130565897.jpg" alt="辽宁大面积违规种植转基因玉米"/>
+                                    <div class="tip"><span>辽宁大面积违规种植转基因玉米</span></div>
+                                </li>
+                                <li>
+                                	<img src="images/130565961.jpg" alt="南沙永暑礁填海造陆记"/>
+                                    <div class="tip"><span>南沙永暑礁填海造陆记</span></div>
+                                </li>
+                            </ul>
+                            <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2" data-equalizer="foo">
+                                <li>
+                                	<img src="images/130566043.jpg" alt="工科小伙4年'追星'路"/>
+                                    <div class="tip"><span>工科小伙4年"追星"路</span></div>
+                                </li>
+                                <li>
+                                	<img src="images/130566152.jpg" alt="舌尖上的海鲜哪里来"/>
+                                    <div class="tip"><span>舌尖上的海鲜哪里来</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="topic-footer">
+                    <div class="btn-more"><a href="list.html" title="查看更多图片">查看更多</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row small-padding" id="frame_row_3">
+    	<div class="columns large-12 picList" id="frame_picList_3">
+        	<div class="topic-box" id="data_topic-box3">
+                <div class="topic-head">
+                	<div class="topic-title">
+                    	<h2>鹅眼</h2>
+                    </div>
+                </div>
+                <div class="topic-con">
+                	<div class="row">
+                    	<div class="columns large-6 medium-12 small-12">
+                        	<a href="pic_article.html"><img src="images/130565745.jpg" alt="2015年我参加了15场婚礼"/></a>
+                            <div class="tip"><span>2015年我参加了15场婚礼</span></div>
+                        </div>
+                        <div class="columns large-6 medium-12 small-12">
+                        	<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2" data-equalizer="foo">
+                                <li>
+                                	<img src="images/130565897.jpg" alt="辽宁大面积违规种植转基因玉米"/>
+                                    <div class="tip"><span>辽宁大面积违规种植转基因玉米</span></div>
+                                </li>
+                                <li>
+                                	<img src="images/130565961.jpg" alt="南沙永暑礁填海造陆记"/>
+                                    <div class="tip"><span>南沙永暑礁填海造陆记</span></div>
+                                </li>
+                            </ul>
+                            <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2" data-equalizer="foo">
+                                <li>
+                                	<img src="images/130566043.jpg" alt="工科小伙4年'追星'路"/>
+                                    <div class="tip"><span>工科小伙4年"追星"路</span></div>
+                                </li>
+                                <li>
+                                	<img src="images/130566152.jpg" alt="舌尖上的海鲜哪里来"/>
+                                    <div class="tip"><span>舌尖上的海鲜哪里来</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="topic-footer">
+                    <div class="btn-more"><a href="list.html" title="查看更多图片">查看更多</a></div>
+                </div>
+            </div>
+        </div>
+    </div> 
+  </div>
+  <!--end main-->
+  
+  <div class="footer" id="frame_footer" role="contentinfo" include="include.html">
+    <div class="subnav clearfix" id="frame_footer_subnav">
+       <div class="row margin-b hide-for-small clearfix" id="frame_footer_1">
+          <div class="left" id="data_subnav_1"> 
+            <img src="images/lph-footer-logo.png" alt="雷锋网"/>
+          </div>
+          <div class="right" id="data_subnav_2"> 
+            <a href="#">联系我们</a><span>|</span>
+            <a href="#">关于我们</a><span>|</span>
+            <a href="#">投稿</a><span>|</span>
+            <a href="#">加入我们</a>
+            <a href="#" class="weibo"></a>
+            <a href="#" class="youxiang"></a>
+          </div>
+       </div>
+       <div class="row margin-t margin-b" id="frame_footer_2">
+            <div class="link" id="frame_footer_link">
+                <div class="youqing"><p class="left">友情链接：</p></div>
+                <a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a>
+            </div>
+    	</div>
+    </div>
+    <!---->
+    <div class="copyright" id="frame_footer_copyright">
+        <div class="row" id="data_copyright"> Copyright © 2013-2015  www.xxxxx.com</div>
+    </div>
+  </div>
+  <!--end footer--> 
+  
+  <div id="frame_javascript">
+  	<div id="data_javascript">
+		<script src="javascript/foundation.min.js"></script> 
+        <script src="javascript/main.js"></script>
+        <script src="javascript/others.js"></script> 
+		<script>
+		  $(document).foundation();
+		</script>
+    </div>
+  </div>
+</div>
+</div>
+
+
+</body>
+</html>

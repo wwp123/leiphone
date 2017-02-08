@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--PC端访问优先使用IE最新版本和Chrome-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="telephone=no" name="format-detection">
+<title>视频播放页</title>
+<link href="style/layout.css" rel="stylesheet" type="text/css" />
+<link href="style/themes.css" rel="stylesheet" type="text/css" />
+<link href="style/master.css" rel="stylesheet" type="text/css" />
+<link href="style/new.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="style/font-awesome.min.css"/>
+<link rel="stylesheet" href="build/mediaelementplayer.min.css" />
+
+<script src="javascript/less-1.7.3.min.js"></script>
+<script src="javascript/vendor/modernizr.js"></script>
+<script src="javascript/vendor/jquery.js"></script>
+<script src="javascript/AppendAround.js"></script><!--屏幕切换时，变换模块的位置的JS-->
+</head>
+<body>
+<div id="layout">
+<div class="wrapper" id="frame_wrapper">
+  <div class="header" id="frame_header" include="include.html">
+  	<div class="tool-bar tool-top" id="frame_tool_bar">
+        <div class="row clearfix" id="frame_tb_row">
+            <div id="frame_main_site" class="left left-toolbox">
+                <div class="drop-bar" id="drop-bar1">
+                	<ul>
+                		<li><a href="index.html">首页</a></li>
+                        <li><a href="#">硬创邦</a></li>
+                        <li><a href="#">爱搞机</a></li>
+                        <li><a href="#">产品</a></li>
+                        <li><a href="#">试用</a></li>
+                        <li><a href="#">极客购</a></li>
+                        <li><a href="#">活动</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="frame_main_site2" class="right right-toolbox hide-for-small">
+            	<a href="#" class="message"><i class="fa fa-bell-o"></i></a>
+            </div>
+            <div class="tool-top" data-set="menu_addr_2" id="frame_tool_top">
+            	<div class="dropdown right" id="dropdown">
+                    <a data-dropdown="drop1" aria-controls="drop1" aria-expanded="false"><i class="fa fa-user fa-fw"></i>用户 <i class="fa fa-angle-down"></i></a>
+                    <ul id="drop1" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+                      <li><a href="#">注册</a></li>
+                      <li><a href="#">登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row collapse" id="frame_header_row1">
+      <div class="large-12" id="frame_header_col1">
+        <nav class="top-bar" data-topbar role="navigation" id="frame_top_bar">
+          <ul class="title-area">
+            <li class="name left">
+              <div class="logo"><img src="images/igao7_logo.png" alt="爱搞机"/></div>
+            </li>
+            <li class="user"><div class="append-aside" data-set="menu_addr_2"><!--小屏下append过来的内容在这里--></div></li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+          </ul>
+          <section class="top-bar-section"> 
+              <ul class="left">
+                  <li class="active"><a href="index.html">首页</a></li>
+                  <li><a href="javascript:void(0)">评测</a></li>
+                  <li><a href="javascript:void(0)">观机</a></li>
+                  <li><a href="javascript:void(0)">TV</a></li>
+                  <li><a href="javascript:void(0)">跑分</a></li>
+                  <li><a href="javascript:void(0)">91拆</a></li>
+              </ul>
+              <ul class="right">
+                  <li class="has-form">
+                    <div class="search" id="search" role="search">
+                        <form >
+                          <input name="" class="inp" id="topsearch" type="text" placeholder="输入查询内容" accesskey="s" title="输入查询内容" x-webkit-speech="" x-webkit-grammar="builtin:translate" lang="zh-CN">
+                          <!--<span onClick="showSearch()"></span>-->
+                          <i class="fa fa-2x fa-search" onClick="showSearch()" title="搜索"></i>
+                        </form>
+                    </div>
+                  </li>
+               </ul>
+          </section>
+          
+        </nav>
+      </div>
+        <div id="frame_appendjs">
+			<script>
+			$( "#dropdown" ).appendAround();
+			  
+            </script>
+       </div>
+    </div>
+  </div>
+  <!--end header-->
+  
+  <div class="main" role="main" aria-label="主体区块" id="frame_main">
+  	<div id="frame_breadcrumbs" class="row breadcrumbs clearfix"> 
+       <span id="data_addr_now" class="addr_now" func="curpage"> 
+            当前位置：<a href="index.html"> 首页 </a>&gt;<a href="videoList.html"> 视频列表页</a> &gt;<a href="#"> 视频播放页</a> 
+       </span> 
+   </div>
+    <div class="row small-padding" id="frame_main_row2">
+    	<div class="large-8 medium-12 small-12 columns" id="frame_main_col1" role="complementary" aria-label="左边区域">
+        	<div class="article-hd" id="frame_article-hd"> 
+                <h1 class="article-tit">初尝棉花糖 Galaxy S6 Edge升级Android 6.0体验</h1> 
+           </div> 
+			<div class="article-con" id="frame_article-con">
+            	<div class="margin-b30">
+                	<div class="video-play">
+                        <video width="100%" height="100%" src="media/echo-hereweare.mp4" type="video/mp4" id="player1" poster="media/echo-hereweare.jpg" controls preload="none"></video>
+                    </div>
+                    <div class="video-con clearfix">
+                      <div class="share">
+                         <div class="bdsharebuttonbox"><a href="javascript:;" class="bds_more" data-cmd="more"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":[],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":[]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+                  </div>
+                      <div class="download">
+                      	 <a href="javascript:;"><i class="fa fa-download fa-fw"></i>下载</a>
+                      </div>
+                      <div class="schedule">
+                      	 <a href="javascript:;"><i class="fa fa-clock-o fa-fw"></i>全球追综艺时间表</a>
+                      </div>
+                      <div class="play_account">
+                      	 <a href="javascript:;"><span>805.0万</span>次播放 <!--<i class="fa fa-angle-down fa-fw"></i>--></a>
+                      </div>
+                      <div class="comment_account">
+                      	 <a href="javascript:;"><span>247</span>条评论</a>
+                      </div>
+                </div>
+                </div>
+                <div class="tj_video margin-b30 hide-for-small">
+                	<div class="vd_img"><a href="#"><img src="images/bavd7y.jpg" alt="搜神记"/></a></div>
+                    <div class="vd_text">
+                    	<div class="vd_title">
+                        	<a href="#"><h3>搜神记</h3></a>
+                            <span>每周一晚9:00</span>
+                        </div>
+                        <div class="vd_info">
+                        	<ul>
+                            	<li class="vd_tag">
+                                	<span>标签:</span>
+                                    <a href="#">腾讯出品</a>
+                                    <a href="#">腾讯综艺台</a>
+                                    <a href="#">内地</a>
+                                </li>
+                                <li class="vd_name">
+                                	<span>主持:</span>
+                                    <a href="#">冯唐</a>
+                                </li>
+                                <li class="vd_jj">
+                                	<span>简介:</span>
+                                    <p>《搜神记》是一档跨界纪实真人秀，主持人冯唐搜罗生活中土生土长的大神们，比如锤子科技公司CEO、日本天妇罗之神的弟子等等，通过对话、自黑、过招的方式，展现大神们傍身的神技，呈现他们成为大神的故事，迸出值得思考和感悟的精神。</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="article_commont">
+                    <div>
+                        <h2>网友评论:</h2>
+                    </div>
+                    <div class="submit_con">
+                        <div class="text clearfix">
+                            <textarea placeholder="我有话要说..."></textarea>
+                            <button class="sub_btn hide-for-small">提交</button>
+                        </div>
+                        <div>
+                            <span class="face"></span>
+                            <label class="tb"><input type="checkbox"/>同步到新浪微博</label>
+                        </div>
+                        <button class="show-for-small">提交</button>
+                    </div>
+                   </div>
+                <div class="mod-rec-m1 new_commont" id="mod_2">
+                      <div class="modhead">
+                        <div class="modtitle">
+                          <h3><a href="#">最新评论</a></h3>
+                        </div>
+                      </div>
+                      <div class="modcon auto_list">
+                        <ul>
+                            <li>
+                                <div class="clr clearfix">
+                                    <a href="#"><img src="images/93_avatar_pic_40_40.jpg" alt="XLsoft"/></a>
+                                    <a class="name" href="#">XLsoft</a>
+                                    <span class="vip">vip</span>
+                                    <span class="time">昨天 17:02</span>
+                                    <div class="commont">
+                                        <span>看配置啥的挺不错</span>
+                                    </div>
+                                    <div>
+                                        <a href="javascript:;" class="reply">
+                                            <i class="fa fa-comment fa-fw"></i>
+                                            <span>回复</span>
+                                        </a>
+                                        <a href="javascript:;" class="good">
+                                            <i class="fa fa-thumbs-up fa-fw"></i>
+                                            <span>(0)</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clr clearfix">
+                                    <a href="#"><img src="images/57_avatar_pic_40_40.jpg" alt="XLsoft"/></a>
+                                    <a class="name" href="#">XLsoft</a>
+                                    <span class="s_white">小白</span>
+                                    <span class="time">昨天 17:02</span>
+                                    <div class="commont">
+                                        <span>看配置啥的挺不错</span>
+                                    </div>
+                                    <div>
+                                        <a href="javascript:;" class="reply">
+                                            <i class="fa fa-comment fa-fw"></i>
+                                            <span>回复</span>
+                                        </a>
+                                        <a href="javascript:;" class="good">
+                                            <i class="fa fa-thumbs-up fa-fw"></i>
+                                            <span>(0)</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clr clearfix">
+                                    <a href="#"><img src="images/70_avatar_pic_40_40.jpg" alt="XLsoft"/></a>
+                                    <a class="name" href="#">XLsoft</a>
+                                    <span class="vip">vip</span>
+                                    <span class="time">昨天 17:02</span>
+                                    <div class="commont">
+                                        <span>这价位，这配置，只对的起，音质耳机和外观。。。</span>
+                                    </div>
+                                    <div>
+                                        <a href="javascript:;" class="reply">
+                                            <i class="fa fa-comment fa-fw"></i>
+                                            <span>回复</span>
+                                        </a>
+                                        <a href="javascript:;" class="good">
+                                            <i class="fa fa-thumbs-up fa-fw"></i>
+                                            <span>(0)</span>
+                                        </a>
+                                    </div>
+                                </div>
+                           </li>
+                            <li>
+                                <div class="clr clearfix">
+                                    <a href="#"><img src="images/93_avatar_pic_40_40.jpg" alt="XLsoft"/></a>
+                                    <a class="name" href="#">XLsoft</a>
+                                    <span class="vip">vip</span>
+                                    <span class="time">昨天 17:02</span>
+                                    <div class="commont">
+                                        <span>看配置啥的挺不错</span>
+                                    </div>
+                                    <div>
+                                        <a href="javascript:;" class="reply">
+                                            <i class="fa fa-comment fa-fw"></i>
+                                            <span>回复</span>
+                                        </a>
+                                        <a href="javascript:;" class="good">
+                                            <i class="fa fa-thumbs-up fa-fw"></i>
+                                            <span>(0)</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clr clearfix">
+                                    <a href="#"><img src="images/57_avatar_pic_40_40.jpg" alt="XLsoft"/></a>
+                                    <a class="name" href="#">XLsoft</a>
+                                    <span class="s_white">小白</span>
+                                    <span class="time">昨天 17:02</span>
+                                    <div class="commont">
+                                        <span>看配置啥的挺不错</span>
+                                    </div>
+                                    <div>
+                                        <a href="javascript:;" class="reply">
+                                            <i class="fa fa-comment fa-fw"></i>
+                                            <span>回复</span>
+                                        </a>
+                                        <a href="javascript:;" class="good">
+                                            <i class="fa fa-thumbs-up fa-fw"></i>
+                                            <span>(0)</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clr clearfix">
+                                    <a href="#"><img src="images/70_avatar_pic_40_40.jpg" alt="XLsoft"/></a>
+                                    <a class="name" href="#">XLsoft</a>
+                                    <span class="vip">vip</span>
+                                    <span class="time">昨天 17:02</span>
+                                    <div class="commont">
+                                        <span>这价位，这配置，只对的起，音质耳机和外观。。。</span>
+                                    </div>
+                                    <div>
+                                        <a href="javascript:;" class="reply">
+                                            <i class="fa fa-comment fa-fw"></i>
+                                            <span>回复</span>
+                                        </a>
+                                        <a href="javascript:;" class="good">
+                                            <i class="fa fa-thumbs-up fa-fw"></i>
+                                            <span>(0)</span>
+                                        </a>
+                                    </div>
+                                </div>
+                           </li>
+                        </ul>
+                    </div>
+                    </div>
+                <div class="append-aside" data-set="menu_addr"><!--小屏下append过来的内容在这里--></div>
+                <div class="back-btn">
+                        <button class="secondary"><a href="index.html"><i class="fa fa-angle-double-left fa-fw"></i>返回首页</a></button>
+                   </div>
+                <div class="ycb-code clearfix">
+                    <a href="javascript:;"><img src="images/5644119ab8390.jpg" class="搞机啦"/></a>
+                    <div class="des">
+                        <h3>搞机啦</h3>
+                        <p>爱搞机旗下视频公众号，带给你更直观的视频评测。</p>
+                    </div>
+                </div>
+            </div>
+    	</div>  
+    	<div class="large-4 medium-12 small-12 columns tool-top" id="frame_main_col2" data-set="menu_addr" role="complementary" aria-label="右边区域">
+        	<aside id="frame_aside">
+        	<div id="frame_info" class="right-box">
+                <div class="large-12 medium-6 small-12 columns medium-padding-l" id="frame_r3">
+                <div class="mod-rec-m1 newpdt" id="mod_4">
+                  <div class="modhead clearfix">
+                    <div class="modtitle">
+                      <h3><a href="#">推荐产品</a></h3>
+                    </div>
+                  </div>
+                  <div class="modcon auto_list">
+                  	<ul class="title">
+                    	<li class="clearfix">
+                        	<div class="np_img">
+                            	<a href="#"><img src="images/5698b4c8381dc.png" alt="富士X-PRO2 aaaaaaaaaaaaaaaaaaaaaa"/></a>
+                            </div>
+                            <div class="np_con">
+                            	<div class="name"><a href="#">富士X-PRO2 aaaaaaaaaaaaaaaaaaaaaa</a></div>
+                                <div class="iconbox clearfix">
+                                    <a class="msg" href="#"><i class="fa fa-heart fa-fw"></i><span>10</span></a>
+                                    <a class="view" href="#"><i class="fa fa-comment fa-fw"></i><span>0</span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                        	<div class="np_img">
+                            	<a href="#"><img src="images/5697415880167.png" alt="富士X-PRO2"/></a>
+                            </div>
+                            <div class="np_con">
+                            	<div class="name"><a href="#">富士X-PRO2</a></div>
+                                <div class="iconbox clearfix">
+                                    <a class="msg" href="#"><i class="fa fa-heart fa-fw"></i><span>10</span></a>
+                                    <a class="view" href="#"><i class="fa fa-comment fa-fw"></i><span>0</span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                        	<div class="np_img">
+                            	<a href="#"><img src="images/568f12acf398a.jpg" alt="富士X-PRO2"/></a>
+                            </div>
+                            <div class="np_con">
+                            	<div class="name"><a href="#">富士X-PRO2</a></div>
+                                <div class="iconbox clearfix">
+                                    <a class="msg" href="#"><i class="fa fa-heart fa-fw"></i><span>10</span></a>
+                                    <a class="view" href="#"><i class="fa fa-comment fa-fw"></i><span>0</span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                        	<div class="np_img">
+                            	<a href="#"><img src="images/5698b4c8381dc.png" alt="富士X-PRO2"/></a>
+                            </div>
+                            <div class="np_con">
+                            	<div class="name"><a href="#">富士X-PRO2</a></div>
+                                <div class="iconbox clearfix">
+                                    <a class="msg" href="#"><i class="fa fa-heart fa-fw"></i><span>10</span></a>
+                                    <a class="view" href="#"><i class="fa fa-comment fa-fw"></i><span>0</span></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+                </div>
+                <div class="large-12 medium-6 small-12 columns medium-padding-r" id="frame_r4">
+                <div class="mod-rec-m2 calc" id="mod_5">
+                  <div class="modhead">
+                    <div class="modtitle">
+                      <h3><a href="#">雷锋日历</a></h3>
+                    </div>
+                  </div>
+                  <div class="modcon auto_list">
+                  	<ul>
+                    	<li>
+                            <div class="label secondary"><span class="r">14</span>/<span class="y">12月</span></div>
+                        	<a href="#">
+                                <div class="title"><span>【锋神榜】2015年度雷锋网十佳评选</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="label secondary"><span class="r">13</span>/<span class="y">1月</span></div>
+                        	<a href="#">
+                                <div class="title"><span>【锋神榜】2015年度雷锋网十佳评选</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="label secondary"><span class="r">12</span>/<span class="y">2月</span></div>
+                        	<a href="#">
+                                <div class="title"><span>【锋神榜】2015年度雷锋网十佳评选</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="label secondary"><span class="r">11</span>/<span class="y">10月</span></div>
+                        	<a href="#">
+                                <div class="title"><span>【锋神榜】2015年度雷锋网十佳评选</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="label secondary"><span class="r">10</span>/<span class="y">12月</span></div>
+                        	<a href="#">
+                                <div class="title"><span>【锋神榜】2015年度雷锋网十佳评选</span></div>
+                            </a>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+                </div>
+                <div class="large-12 medium-6 small-12 columns medium-padding-l" id="frame_r5">
+                <div class="mod-rec-m2 vip" id="mod_6">
+                  <div class="modhead clearfix">
+                    <div class="modtitle left">
+                      <h3><a href="#">会员换购</a></h3>
+                    </div>
+                    <div class="modmore">
+                    	<a href="javascript:;"><i class="fa fa-refresh" id="reflash"></i></a>
+                    </div>
+                  </div>
+                  <div class="modcon auto_list">
+                  	<ul class="change_1">
+                    	<li class="img-mar">
+                        	<a href="#">
+                            	<img src="images/563b17af898e8.png" alt="a"/>
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#">
+                            	<img src="images/563b17af898e8.png" alt="a"/>
+                            </a>
+                        </li>
+                        <li class="img-mar">
+                        	<a href="#">
+                            	<img src="images/563b17af898e8.png" alt="a"/>
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#">
+                            	<img src="images/563b17af898e8.png" alt="a"/>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="change_2">
+                    	<li class="img-mar">
+                        	<a href="#">
+                            	<img src="images/5699cfb2e6105.jpg" alt="a"/>
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#">
+                            	<img src="images/5699cfb2e6105.jpg" alt="a"/>
+                            </a>
+                        </li>
+                        <li class="img-mar">
+                        	<a href="#">
+                            	<img src="images/5699cfb2e6105.jpg" alt="a"/>
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="#">
+                            	<img src="images/5699cfb2e6105.jpg" alt="a"/>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tg"><span>本栏目由极客购提供</span></div>
+                  </div>
+                </div>
+                </div>
+            </div>
+            
+        </aside>
+            <div id="frame_appendjs2">
+                <script>
+                $( "#frame_aside" ).appendAround();
+                </script>
+           </div>
+        </div> 
+  </div>
+  </div>
+  <!--end main-->
+  
+  <div class="footer" id="frame_footer" role="contentinfo" include="include.html">
+    <div class="subnav clearfix" id="frame_footer_subnav">
+       <div class="row margin-b hide-for-small clearfix" id="frame_footer_1">
+          <div class="left" id="data_subnav_1"> 
+            <img src="images/lph-footer-logo.png" alt="雷锋网"/>
+          </div>
+          <div class="right" id="data_subnav_2"> 
+            <a href="#">联系我们</a><span>|</span>
+            <a href="#">关于我们</a><span>|</span>
+            <a href="#">投稿</a><span>|</span>
+            <a href="#">加入我们</a>
+            <a href="#" class="weibo"></a>
+            <a href="#" class="youxiang"></a>
+          </div>
+       </div>
+       <div class="row margin-t margin-b" id="frame_footer_2">
+
+            <div class="link" id="frame_footer_link">
+                <div class="youqing"><p class="left">友情链接：</p></div>
+                <a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a>
+            </div>
+    	</div>
+    </div>
+    <!---->
+    <div class="copyright" id="frame_footer_copyright">
+        <div class="row" id="data_copyright"> Copyright © 2013-2015  www.xxxxx.com</div>
+    </div>
+  </div>
+  <!--end footer--> 
+  <div id="frame_go"><div class="go"><a title="返回顶部" class="gotop" id="goTop"></a> <a title="返回底部" class="gobottom" id="goBottom"></a></div></div>
+  <div id="frame_javascript">
+  	<div id="data_javascript">
+		<script src="javascript/foundation.min.js"></script> 
+        <script src="javascript/main.js"></script>
+        <script src="javascript/others.js"></script>
+		<script src="build/mediaelement-and-player.min.js"></script>
+		<script>
+		  $('#reflash').on('click',function(){
+			  $('.change_1').toggle();
+			  $('.change_2').toggle();  
+		  });
+		  $('.gave a').on('click',function(){
+			  $('.code').toggle();  
+		  });
+		  $('audio, video').mediaelementplayer({
+			//mode: 'shim',
+		
+			pluginPath:'../build/', 
+			enablePluginSmoothing:true,
+			enablePluginDebug: true,
+			//duration: 489,
+			//startVolume: 0.4,
+			//iPadUseNativeControls: true,
+			//mode: 'shim',
+			//forcePluginFullScreen: true,
+			//usePluginFullScreen: true,
+			//mode: 'native',
+			//plugins: ['silverlight'],
+			//features: ['playpause','volume','stop'],
+		  })
+		  $(document).foundation();
+		</script>
+    </div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

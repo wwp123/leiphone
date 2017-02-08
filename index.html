@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--PC端访问优先使用IE最新版本和Chrome-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="telephone=no" name="format-detection">
+<title>首页</title>
+<link href="style/themes.css" rel="stylesheet" type="text/css" />
+<link href="style/layout.css" rel="stylesheet" type="text/css" />
+<link href="style/master.css" rel="stylesheet" type="text/css" />
+<link href="style/new.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="style/font-awesome.min.css"/>
+<!--焦点图css-->
+<link rel="stylesheet" href="style/idangerous.swiper.css"/>
+<link rel="stylesheet" href="style/movies-app.css"/>
+
+<script src="javascript/less-1.7.3.min.js"></script>
+<script src="javascript/vendor/modernizr.js"></script>
+<script src="javascript/vendor/jquery.js"></script>
+<script src="javascript/AppendAround.js"></script><!--屏幕切换时，变换模块的位置的JS-->
+</head>
+<body>
+<div id="layout">
+<div class="wrapper" id="frame_wrapper">
+  <div class="header" id="frame_header" include="include.html">
+  	<div class="tool-bar tool-top" id="frame_tool_bar">
+        <div class="row clearfix" id="frame_tb_row">
+            <div id="frame_main_site" class="left left-toolbox">
+                <div class="drop-bar" id="drop-bar1">
+                	<ul>
+                		<li><a href="index.html">首页</a></li>
+                        <li><a href="#">硬创邦</a></li>
+                        <li><a href="#">爱搞机</a></li>
+                        <li><a href="#">产品</a></li>
+                        <li><a href="#">试用</a></li>
+                        <li><a href="#">极客购</a></li>
+                        <li><a href="#">活动</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="frame_main_site2" class="right right-toolbox hide-for-small">
+            	<a href="#" class="message"><i class="fa fa-bell-o"></i></a>
+            </div>
+            <div class="tool-top" data-set="menu_addr_2" id="frame_tool_top">
+            	<div class="dropdown right" id="dropdown">
+                    <a data-dropdown="drop1" aria-controls="drop1" aria-expanded="false"><i class="fa fa-user fa-fw"></i>用户 <i class="fa fa-angle-down"></i></a>
+                    <ul id="drop1" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+                      <li><a href="#">注册</a></li>
+                      <li><a href="#">登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row collapse" id="frame_header_row1">
+      <div class="large-12" id="frame_header_col1">
+        <nav class="top-bar" data-topbar role="navigation" id="frame_top_bar">
+          <ul class="title-area">
+            <li class="name left">
+              <div class="logo"><img src="images/igao7_logo.png" alt="爱搞机"/></div>
+            </li>
+            <li class="user"><div class="append-aside" data-set="menu_addr_2"><!--小屏下append过来的内容在这里--></div></li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+          </ul>
+          <section class="top-bar-section"> 
+              <ul class="left">
+                  <li class="active"><a href="index.html">首页</a></li>
+                  <li><a href="javascript:void(0)">评测</a></li>
+                  <li><a href="javascript:void(0)">观机</a></li>
+                  <li><a href="javascript:void(0)">TV</a></li>
+                  <li><a href="javascript:void(0)">跑分</a></li>
+                  <li><a href="javascript:void(0)">91拆</a></li>
+              </ul>
+              <ul class="right">
+                  <li class="has-form">
+                    <div class="search" id="search" role="search">
+                        <form >
+                          <input name="" class="inp" id="topsearch" type="text" placeholder="输入查询内容" accesskey="s" title="输入查询内容" x-webkit-speech="" x-webkit-grammar="builtin:translate" lang="zh-CN">
+                          <!--<span onClick="showSearch()"></span>-->
+                          <i class="fa fa-2x fa-search" onClick="showSearch()" title="搜索"></i>
+                        </form>
+                    </div>
+                  </li>
+               </ul>
+          </section>
+          
+        </nav>
+      </div>
+        <div id="frame_appendjs">
+			<script>
+			$( "#dropdown" ).appendAround();
+			  
+            </script>
+       </div>
+    </div>
+  </div>
+  <!--end header-->
+  
+  <div class="main index_main" role="main" aria-label="主体区块" id="frame_main">
+  	<div class="row" id="frame_main_row1">
+    	<div class="swiper-container">
+            <!--<div>
+                <a class="arrow-left" href="#"></a>
+                <a class="arrow-right" href="#"></a>
+            </div>-->
+            <div class="swiper-content">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="inner">
+                            <a href="videoList.html"><img class="movie-pic" src="images/1.jpg" alt="Smartisan T2"></a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="inner">
+                            <a href="videoList.html"><img class="movie-pic" src="images/2.jpg" alt="Galaxy A9"></a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="inner">
+                            <a href="videoList.html"><img class="movie-pic" src="images/3.jpg" alt="LG V10"></a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-nav">
+            	<div class="swiper-titles">
+                    <div class="swiper-title active">
+                        <h2 class="hide-for-small">情怀价值几何？</h2>
+                        <h3>锤子Smartisan T2上手评测</h3>
+                    </div>
+                    <div class="swiper-title">
+                        <h2 class="hide-for-small">骁龙652登场 </h2>
+                        <h3>三星Galaxy A9全球首发评测</h3>
+                    </div>
+                    <div class="swiper-title">
+                        <h2 class="hide-for-small">好事成"双"</h2>
+                        <h3>LG V10上手评测视频</h3>
+                    </div>         
+                </div>
+                <div class="swiper-wrapper hide-for-small">
+                    <div class="swiper-slide active-nav">          
+                        <span class=""></span>
+                        <img num="1" src="images/1.jpg" alt="Smartisan T2">
+                    </div>
+                    <div class="swiper-slide">      
+                        <span class=""></span>
+                        <img num="2" src="images/2.jpg" alt="Galaxy A9">
+                    </div>
+                    <div class="swiper-slide">              
+                        <span class=""></span>
+                        <img num="3" src="images/3.jpg" alt="LG V10">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  	<div class="row" id="frame_main_row2">
+    	<div class="large-8 medium-12 small-12 columns small-padding" id="frame_main_col1" role="complementary" aria-label="左边区域">
+        	<div class="topic-box radius" id="data_topic_box1">
+                <div class="topic-head clearfix">
+                    <div class="topic-title small-inline">
+                        <div class="gj-btn">
+                            <a href="list.html">搞机快讯</a>
+                            <span></span>
+                        </div>
+                        <h2 class="inline"><a href="article.html">售价才十万元？夏普8K电视开卖</a></h2>
+                    </div>
+                    <div class="topic-status">
+                        <div class="face"><a href="#"><img src="images/55dfc4a38f126_100_100.jpg" alt="小酒窝"/></a></div>
+                        <div class="nickname"><a href="#">小酒窝</a></div>
+                        <div class="keywords">
+                            <a href="#" class="p-color">8k</a>
+                            <a href="#" class="p-color">aaaaa</a>
+                            <a href="#" class="p-color">夏普</a>
+                        </div>
+                        <div class="count p-color"><i class="fa fa-comment fa-fw"></i><span>6</span></div>
+                        <div class="time">2016/01/17 07:21</div>
+                    </div>
+                </div>
+                <div class="shadow">
+                    <div class="topic-con">
+                        <a href="article.html"><img class="block-img" src="images/569ad186f3f0a.png" alt="夏普8K电视开卖" /></a>
+                        <!--<div class="description">
+                        </div>-->
+                    </div>
+                    <div class="topic-footer clearfix">
+                        <div class="row">
+                            <div class="columns large-9 medium-9 small-12 arcinfo"><p>夏普推出了一款80英寸的4K电视Aquos LC-80XU930X，其采用了公司的Quattron技术，能够将像素点一分为四，从而实现8K的分辨率。</p>
+                                <div class="btn-more"><a href="article.html" title="阅读更多">阅读更多</a></div>
+                            </div>
+                            <div class="columns large-2 medium-3 small-12 read-more hide-for-small">
+                                <a href="article.html" class="p-color">阅读更多<i></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        	</div>
+            <div class="topic-box radius" id="data_topic_box2">
+                <div class="topic-head clearfix">
+                    <div class="topic-title small-inline">
+                        <div class="gj-btn">
+                            <a href="list.html">搞机快讯</a>
+                            <span></span>
+                        </div>
+                        <h2 class="inline"><a href="article.html">微软下杀手锏？新CPU用Windows 10才能获得支持服务</a></h2>
+                    </div>
+                    <div class="topic-status">
+                        <div class="face"><a href="#"><img src="images/55dfc4a38f126_100_100.jpg" alt="小酒窝"/></a></div>
+                        <div class="nickname"><a href="#">小酒窝</a></div>
+                        <div class="keywords">
+                            <a href="#" class="p-color">8k</a>
+                            <a href="#" class="p-color">aaaaa</a>
+                            <a href="#" class="p-color">夏普</a>
+                        </div>
+                        <div class="count p-color"><i class="fa fa-comment fa-fw"></i><span>6</span></div>
+                        <div class="time">2016/01/17 07:21</div>
+                    </div>
+                </div>
+                <div class="shadow">
+                    <div class="topic-con">
+                        <div><img class="block-img" src="images/569b9a78023ff.jpg" alt="夏普8K电视开卖" /></div>
+                        <!--<div class="description">
+                        </div>-->
+                    </div>
+                    <div class="topic-footer clearfix">
+                        <div class="row">
+                            <div class="columns large-9 medium-9 small-12 arcinfo"><p>夏普推出了一款80英寸的4K电视Aquos LC-80XU930X，其采用了公司的Quattron技术，能够将像素点一分为四，从而实现8K的分辨率。</p>
+                                <div class="btn-more"><a href="article.html" title="阅读更多">阅读更多</a></div>
+                            </div>
+                            <div class="columns large-2 medium-3 small-12 read-more hide-for-small">
+                                <a href="article.html" class="p-color">阅读更多<i></i></a>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+        	</div>
+            <div class="topic-box radius" id="data_topic_box3">
+                <div class="topic-head clearfix">
+                    <div class="topic-title small-inline">
+                        <div class="gj-btn">
+                            <a href="list.html">搞机快讯</a>
+                            <span></span>
+                        </div>
+                        <h2 class="inline"><a href="article.html">MIL-STD-810G级超强防护！Windows 10平板Mesa 2发布</a></h2>
+                    </div>
+                    <div class="topic-status">
+                        <div class="face"><a href="#"><img src="images/55dfc4a38f126_100_100.jpg" alt="小酒窝"/></a></div>
+                        <div class="nickname"><a href="#">小酒窝</a></div>
+                        <div class="keywords">
+                            <a href="#" class="p-color">8k</a>
+                            <a href="#" class="p-color">aaaaa</a>
+                            <a href="#" class="p-color">夏普</a>
+                        </div>
+                        <div class="count p-color"><i class="fa fa-comment fa-fw"></i><span>6</span></div>
+                        <div class="time">2016/01/17 07:21</div>
+                    </div>
+                </div>
+                <div class="shadow">
+                    <div class="topic-con">
+                        <div><img class="block-img" src="images/56a828c9752b5.jpg" alt="夏普8K电视开卖" /></div>
+                        <!--<div class="description">
+                        </div>-->
+                    </div>
+                    <div class="topic-footer clearfix">
+                        <div class="row">
+                            <div class="columns large-9 medium-9 small-12 arcinfo"><p>夏普推出了一款80英寸的4K电视Aquos LC-80XU930X，其采用了公司的Quattron技术，能够将像素点一分为四，从而实现8K的分辨率。</p>
+                                <div class="btn-more"><a href="article.html" title="阅读更多">阅读更多</a></div>
+                            </div>
+                            <div class="columns large-2 medium-3 small-12 read-more hide-for-small">
+                                <a href="article.html" class="p-color">阅读更多<i></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        	</div>
+            <div class="topic-box radius" id="data_topic_box4">
+                <div class="topic-head clearfix">
+                    <div class="topic-title small-inline">
+                        <div class="gj-btn">
+                            <a href="list.html">搞机快讯</a>
+                            <span></span>
+                        </div>
+                        <h2 class="inline"><a href="article.html">售价才十万元？夏普8K电视开卖</a></h2>
+                    </div>
+                    <div class="topic-status">
+                        <div class="face"><a href="#"><img src="images/55dfc4a38f126_100_100.jpg" alt="小酒窝"/></a></div>
+                        <div class="nickname"><a href="#">小酒窝</a></div>
+                        <div class="keywords">
+                            <a href="#" class="p-color">8k</a>
+                            <a href="#" class="p-color">aaaaa</a>
+                            <a href="#" class="p-color">夏普</a>
+                        </div>
+                        <div class="count p-color"><i class="fa fa-comment fa-fw"></i><span>6</span></div>
+                        <div class="time">2016/01/17 07:21</div>
+                    </div>
+                </div>
+                <div class="shadow">
+                    <div class="topic-con">
+                        <div><img class="block-img" src="images/56a6d22e370f7.jpg" alt="夏普8K电视开卖" /></div>
+                        <!--<div class="description">
+                        </div>-->
+                    </div>
+                    <div class="topic-footer clearfix">
+                        <div class="row">
+                            <div class="columns large-9 medium-9 small-12 arcinfo"><p>夏普推出了一款80英寸的4K电视Aquos LC-80XU930X，其采用了公司的Quattron技术，能够将像素点一分为四，从而实现8K的分辨率。</p>
+                                <div class="btn-more"><a href="article.html" title="阅读更多">阅读更多</a></div>
+                            </div>
+                            <div class="columns large-2 medium-3 small-12 read-more hide-for-small">
+                                <a href="article.html" class="p-color">阅读更多<i></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        	</div>
+            <div class="topic-box radius" id="data_topic_box5">
+                <div class="topic-head clearfix">
+                    <div class="topic-title small-inline">
+                        <div class="gj-btn">
+                            <a href="list.html">搞机快讯</a>
+                            <span></span>
+                        </div>
+                        <h2 class="inline"><a href="article.html">售价才十万元？夏普8K电视开卖</a></h2>
+                    </div>
+                    <div class="topic-status">
+                        <div class="face"><a href="#"><img src="images/55dfc4a38f126_100_100.jpg" alt="小酒窝"/></a></div>
+                        <div class="nickname"><a href="#">小酒窝</a></div>
+                        <div class="keywords">
+                            <a href="#" class="p-color">8k</a>
+                            <a href="#" class="p-color">aaaaa</a>
+                            <a href="#" class="p-color">夏普</a>
+                        </div>
+                        <div class="count p-color"><i class="fa fa-comment fa-fw"></i><span>6</span></div>
+                        <div class="time">2016/01/17 07:21</div>
+                    </div>
+                </div>
+                <div class="shadow">
+                    <div class="topic-con">
+                        <div><img class="block-img" src="images/56a6d39c29898.jpg" alt="夏普8K电视开卖" /></div>
+                        <!--<div class="description">
+                        </div>-->
+                    </div>
+                    <div class="topic-footer clearfix">
+                        <div class="row">
+                            <div class="columns large-9 medium-9 small-12 arcinfo"><p>夏普推出了一款80英寸的4K电视Aquos LC-80XU930X，其采用了公司的Quattron技术，能够将像素点一分为四，从而实现8K的分辨率。</p>
+                                <div class="btn-more"><a href="article.html" title="阅读更多">阅读更多</a></div>
+                            </div>
+                            <div class="columns large-2 medium-3 small-12 read-more hide-for-small">
+                                <a href="article.html" class="p-color">阅读更多<i></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        	</div>
+            <div class="topic-box radius" id="data_topic_box6">
+                <div class="topic-head clearfix">
+                    <div class="topic-title small-inline">
+                        <div class="gj-btn">
+                            <a href="list.html">搞机快讯</a>
+                            <span></span>
+                        </div>
+                        <h2 class="inline"><a href="article.html">售价才十万元？夏普8K电视开卖</a></h2>
+                    </div>
+                    <div class="topic-status">
+                        <div class="face"><a href="#"><img src="images/55dfc4a38f126_100_100.jpg" alt="小酒窝"/></a></div>
+                        <div class="nickname"><a href="#">小酒窝</a></div>
+                        <div class="keywords">
+                            <a href="#" class="p-color">8k</a>
+                            <a href="#" class="p-color">aaaaa</a>
+                            <a href="#" class="p-color">夏普</a>
+                        </div>
+                        <div class="count p-color"><i class="fa fa-comment fa-fw"></i><span>6</span></div>
+                        <div class="time">2016/01/17 07:21</div>
+                    </div>
+                </div>
+                <div class="shadow">
+                    <div class="topic-con">
+                        <div><img class="block-img" src="images/568f12acf398a.jpg" alt="夏普8K电视开卖" /></div>
+                        <!--<div class="description">
+                        </div>-->
+                    </div>
+                    <div class="topic-footer clearfix">
+                        <div class="row">
+                            <div class="columns large-9 medium-9 small-12 arcinfo"><p>夏普推出了一款80英寸的4K电视Aquos LC-80XU930X，其采用了公司的Quattron技术，能够将像素点一分为四，从而实现8K的分辨率。</p>
+                                <div class="btn-more"><a href="article.html" title="阅读更多">阅读更多</a></div>
+                            </div>
+                            <div class="columns large-2 medium-3 small-12 read-more hide-for-small">
+                                <a href="article.html" class="p-color">阅读更多<i></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        	</div>
+            <div class="pages" id="data_page_1" func="page">
+                <ul class="clearfix">
+                    <li><a href="#" class="pre">上一页</a></li>
+                    <li class="first"><a href="#">1</a></li>
+                    <li class="num"><a href="#">2</a></li>
+                    <li class="on">3</li>
+                    <li class="num"><a href="#">4</a></li>
+                    <li class="num"><a href="#">5</a></li>
+                    <li class="dots"><a href="#">…</a></li>
+                    <li class="end"><a href="#">15</a></li>
+                    <li><a href="#" class="next">下一页</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="large-4 medium-12 small-12 columns small-padding" id="frame_main_col2" role="complementary" aria-label="右边区域">
+        	<aside id="frame_aside">
+        	<div id="frame_user_info" class="right-box">
+            	<div class="large-12 medium-6 small-12 columns medium-padding-r" id="frame_right">
+                <div class="mod-rec-m1 hot_article margin-t30" id="mod_1">
+                  <div class="modhead">
+                    <div class="modtitle">
+                      <h3><a href="#">热门文章</a></h3>
+                    </div>
+                  </div>
+                  <div class="modcon auto_list">
+                  	<ul class="title">
+                    	<li class="clearfix">
+                        	<div class="arc">
+                            	<a href="article.html" title="性能比Mate 8还强！ 华为P9将搭载麒麟955 华为P9将搭载麒麟955华为P9将搭载">性能比Mate 8还强！ 华为P9将搭载麒麟955 华为P9将搭载麒麟955华为P9将搭载 </a>
+                            </div>
+                            <div class="iconbox clearfix">
+                                <a class="msg" href="#"><i class="fa fa-heart fa-fw"></i><span>10</span></a>
+                            	<a class="view" href="#"><i class="fa fa-comment fa-fw"></i><span>0</span></a>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                        	<div class="arc">
+                            	<a href="article.html" title="性能比Mate 8还强！ 华为P9将搭载麒麟955 华为P9将搭载麒麟955">性能比Mate 8还强！ 华为P9将搭载麒麟955 华为P9将搭载麒麟955 </a>
+                            </div>
+                            <div class="iconbox clearfix">
+                                <a class="msg" href="#"><i class="fa fa-heart fa-fw"></i><span>10</span></a>
+                            	<a class="view" href="#"><i class="fa fa-comment fa-fw"></i><span>0</span></a>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                        	<div class="arc">
+                            	<a href="article.html">性能比Mate 8还强！ 华为P9将搭载麒麟955  </a>
+                            </div>
+                            <div class="iconbox clearfix">
+                                <a class="msg" href="#"><i class="fa fa-heart fa-fw"></i><span>10</span></a>
+                            	<a class="view" href="#"><i class="fa fa-comment fa-fw"></i><span>0</span></a>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                        	<div class="arc">
+                            	<a href="article.html">性能比Mate 8还强！ 华为P9将搭载麒麟955  </a>
+                            </div>
+                            <div class="iconbox clearfix">
+                                <a class="msg" href="#"><i class="fa fa-heart fa-fw"></i><span>10</span></a>
+                            	<a class="view" href="#"><i class="fa fa-comment fa-fw"></i><span>0</span></a>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                        	<div class="arc">
+                            	<a href="article.html">性能比Mate 8还强！ 华为P9将搭载麒麟955  </a>
+                            </div>
+                            <div class="iconbox clearfix">
+                                <a class="msg" href="#"><i class="fa fa-heart fa-fw"></i><span>10</span></a>
+                            	<a class="view" href="#"><i class="fa fa-comment fa-fw"></i><span>0</span></a>
+                            </div>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+                </div>
+                <div class="large-12 medium-6 small-12 columns medium-padding-l" id="frame_right2">
+                <div class="mod-rec-m1 popularize" id="mod_3">
+                  <div class="modhead">
+                    <div class="modtitle">
+                      <h3><a href="#">搞机科普</a></h3>
+                    </div>
+                  </div>
+                  <div class="modcon auto_list">
+                  	<ul class="title">
+                    	<li>
+                        	<a href="#" title="谁是杀手？写在Gear VR消费者版之前的技术解析贴谁是杀手？写在Gear VR消费者版之前的技术解析贴">谁是杀手？写在Gear VR消费者版之前的技术解析贴谁是杀手？写在Gear VR消费者版之前的技术解析贴</a>
+                        </li>
+                        <li>
+                        	<a href="article.html">谁是杀手？写在Gear VR消费者版之前的技术解析贴</a>
+                        </li>
+                        <li>
+                        	<a href="article.html">李嘉诚152亿美元收购O2</a>
+                        </li>
+                        <li>
+                        	<a href="article.html">谁是杀手？写在Gear VR消费者版之前的技术解析贴</a>
+                        </li>
+                        <li>
+                        	<a href="article.html">谁是杀手？写在Gear VR消费者版之前的技术解析贴</a>
+                        </li>
+                        <li>
+                        	<a href="article.html">谁是杀手？写在Gear VR消费者版之前的技术解析贴</a>
+                        </li>
+                    </ul>
+                    <div class="btn-more"><a href="list.html" title="查看更多搞机科普">查看更多</a></div>
+                  </div>
+                </div>
+                </div>
+                <div class="large-12 medium-6 small-12 columns medium-padding-r" id="frame_right3">
+                <div class="mod-rec-m1 new_commont" id="mod_2">
+                  <div class="modhead">
+                    <div class="modtitle">
+                      <h3><a href="#">最新评论</a></h3>
+                    </div>
+                  </div>
+                  <div class="modcon auto_list">
+                  	<ul>
+                    	<li>
+                        	<div class="clr clearfix">
+                            	<a href="#"><img src="images/70_avatar_pic_40_40.jpg" alt="木木木"/></a>
+                            	<a href="#">木木木</a>
+                                <span class="time">52分钟前</span>
+                            </div>
+                            <div class="new-comment-article">
+                            	<a href="#">再添新丁 OPPO R7 Plus全网通高配版上手体验 </a>
+                            </div>
+                            <div class="new-comment-comment">
+                            	<span>评论：</span>
+                                <a href="#">这价位，这配置，只对的起，音质耳机和外观。。。</a>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="clr clearfix">
+                            	<a href="#"><img src="images/70_avatar_pic_40_40.jpg" alt="木木木木木木木木木木木木"/></a>
+                            	<a href="#">木木木木木木木木木木木木</a>
+                                <span class="time">昨天 17:02</span>
+                            </div>
+                            <div class="new-comment-article">
+                            	<a href="#">再添新丁 OPPO R7 Plus全网通高配版上手体验 </a>
+                            </div>
+                            <div class="new-comment-comment">
+                            	<span>评论：</span>
+                                <a href="#">这价位，这配置，只对的起，音质耳机和外观。。。</a>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="clr clearfix">
+                            	<a href="#"><img src="images/70_avatar_pic_40_40.jpg" alt="木木木"/></a>
+                            	<a href="#">木木木</a>
+                                <span class="time">1月1日 15:30</span>
+                            </div>
+                            <div class="new-comment-article">
+                            	<a href="#">再添新丁 OPPO R7 Plus全网通高配版上手体验 </a>
+                            </div>
+                            <div class="new-comment-comment">
+                            	<span>评论：</span>
+                                <a href="#">这价位，这配置，只对的起，音质耳机和外观。。。</a>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="clr clearfix">
+                            	<a href="#"><img src="images/70_avatar_pic_40_40.jpg" alt="木木木"/></a>
+                            	<a href="#">木木木</a>
+                                <span class="time">52分钟前</span>
+                            </div>
+                            <div class="new-comment-article">
+                            	<a href="#">再添新丁 OPPO R7 Plus全网通高配版上手体验 </a>
+                            </div>
+                            <div class="new-comment-comment">
+                            	<span>评论：</span>
+                                <a href="#">这价位，这配置，只对的起，音质耳机和外观。。。</a>
+                            </div>
+                        </li>
+                        <li>
+                        	<div class="clr clearfix">
+                            	<a href="#"><img src="images/70_avatar_pic_40_40.jpg" alt="木木木"/></a>
+                            	<a href="#">木木木</a>
+                                <span class="time">52分钟前</span>
+                            </div>
+                            <div class="new-comment-article">
+                            	<a href="#">再添新丁 OPPO R7 Plus全网通高配版上手体验 </a>
+                            </div>
+                            <div class="new-comment-comment">
+                            	<span>评论：</span>
+                                <a href="#">这价位，这配置，只对的起，音质耳机和外观。。。</a>
+                            </div>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+                </div>
+                <div class="large-12 medium-6 small-12 columns medium-padding-l" id="frame_right4">
+                <div class="media_img">
+                	<a href="javascript:;" class="weibo"><i></i></a>
+                    <a href="javascript:;" class="weixin"><i></i><img src="images/right-ewm.png" alt="扫描二维码"/></a>
+                </div>
+                </div>
+                <div class="large-12 medium-6 small-12 columns medium-padding-l" id="frame_right5">
+                <div class="mod-rec-m1 newpdt" id="mod_4">
+                  <div class="modhead clearfix">
+                    <div class="modtitle">
+                      <h3><a href="#">推荐产品</a></h3>
+                    </div>
+                  </div>
+                  <div class="modcon auto_list">
+                  	<ul class="title">
+                    	<li class="clearfix">
+                        	<div class="np_img">
+                            	<a href="picList.html"><img src="images/5698b4c8381dc.png" alt="富士X-PRO2 aaaaaaaaaaaaaaaaaaaaaa"/></a>
+                            </div>
+                            <div class="np_con">
+                            	<div class="name"><a href="#">富士X-PRO2 aaaaaaaaaaaaaaaaaaaaaa</a></div>
+                                <div class="iconbox clearfix">
+                                    <a class="msg" href="#"><i class="fa fa-heart fa-fw"></i><span>10</span></a>
+                                    <a class="view" href="#"><i class="fa fa-comment fa-fw"></i><span>0</span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                        	<div class="np_img">
+                            	<a href="picList.html"><img src="images/5697415880167.png" alt="富士X-PRO2"/></a>
+                            </div>
+                            <div class="np_con">
+                            	<div class="name"><a href="#">富士X-PRO2</a></div>
+                                <div class="iconbox clearfix">
+                                    <a class="msg" href="#"><i class="fa fa-heart fa-fw"></i><span>10</span></a>
+                                    <a class="view" href="#"><i class="fa fa-comment fa-fw"></i><span>0</span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                        	<div class="np_img">
+                            	<a href="picList.html"><img src="images/568f12acf398a.jpg" alt="富士X-PRO2"/></a>
+                            </div>
+                            <div class="np_con">
+                            	<div class="name"><a href="#">富士X-PRO2</a></div>
+                                <div class="iconbox clearfix">
+                                    <a class="msg" href="#"><i class="fa fa-heart fa-fw"></i><span>10</span></a>
+                                    <a class="view" href="#"><i class="fa fa-comment fa-fw"></i><span>0</span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                        	<div class="np_img">
+                            	<a href="picList.html"><img src="images/5698b4c8381dc.png" alt="富士X-PRO2"/></a>
+                            </div>
+                            <div class="np_con">
+                            	<div class="name"><a href="#">富士X-PRO2</a></div>
+                                <div class="iconbox clearfix">
+                                    <a class="msg" href="#"><i class="fa fa-heart fa-fw"></i><span>10</span></a>
+                                    <a class="view" href="#"><i class="fa fa-comment fa-fw"></i><span>0</span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                        	<div class="np_img">
+                            	<a href="picList.html"><img src="images/5697415880167.png" alt="富士X-PRO2"/></a>
+                            </div>
+                            <div class="np_con">
+                            	<div class="name"><a href="#">富士X-PRO2</a></div>
+                                <div class="iconbox clearfix">
+                                    <a class="msg" href="#"><i class="fa fa-heart fa-fw"></i><span>10</span></a>
+                                    <a class="view" href="#"><i class="fa fa-comment fa-fw"></i><span>0</span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                        	<div class="np_img">
+                            	<a href="picList.html"><img src="images/568f12acf398a.jpg" alt="富士X-PRO2"/></a>
+                            </div>
+                            <div class="np_con">
+                            	<div class="name"><a href="#">富士X-PRO2</a></div>
+                                <div class="iconbox clearfix">
+                                    <a class="msg" href="#"><i class="fa fa-heart fa-fw"></i><span>10</span></a>
+                                    <a class="view" href="#"><i class="fa fa-comment fa-fw"></i><span>0</span></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+                </div>
+                <div class="large-12 medium-12 small-12 columns" id="frame_right6">
+                <div class="mod-rec-m1 link" id="mod_5">
+                  <div class="modhead clearfix">
+                    <div class="modtitle">
+                      <h3><a href="picList.html" class="left">喜欢就买</a></h3>
+                    </div>
+                    <div class="modmore">
+                    	<a href="javascript:;"><i class="fa fa-refresh" id="reflash"></i></a>
+                    </div>
+                  </div>
+                  <div class="modcon auto_list">
+                  	<ul class="change_1">
+                    	<li>
+                        	<a href="picList.html"><img src="images/56495106d4928.jpg" alt="Nomad iPhone 充电钱包"/></a>
+                            <p class="tit"><a href="#">Nomad iPhone 充电钱包</a></p>
+                            <p class="price">959.00元</p>
+                        </li>
+                        <li>
+                        	<a href="picList.html"><img src="images/561dedcc5a9f2.jpg" alt="Nomad iPhone 充电钱包"/></a>
+                            <p class="tit"><a href="#">Nomad iPhone 充电钱包</a></p>
+                            <p class="price">959.00元</p>
+                        </li>
+                        <li>
+                        	<a href="picList.html"><img src="images/563b17af898e8.png" alt="Nomad iPhone 充电钱包"/></a>
+                            <p class="tit"><a href="#">Nomad iPhone 充电钱包</a></p>
+                            <p class="price">959.00元</p>
+                        </li>
+                        <li>
+                        	<a href="picList.html"><img src="images/5639d9c8df105.png" alt="Nomad iPhone 充电钱包"/></a>
+                            <p class="tit"><a href="#">Nomad iPhone 充电钱包</a></p>
+                            <p class="price">959.00元</p>
+                        </li>
+                    </ul>
+                    <ul class="change_2">
+                        <li>
+                        	<a href="picList.html"><img src="images/563b17af898e8.png" alt="Nomad iPhone 充电钱包"/></a>
+                            <p class="tit"><a href="#">Nomad iPhone 充电钱包</a></p>
+                            <p class="price">959.00元</p>
+                        </li>
+                        <li>
+                        	<a href="picList.html"><img src="images/5639d9c8df105.png" alt="Nomad iPhone 充电钱包"/></a>
+                            <p class="tit"><a href="#">Nomad iPhone 充电钱包</a></p>
+                            <p class="price">959.00元</p>
+                        </li>
+                    	<li>
+                        	<a href="picList.html"><img src="images/56495106d4928.jpg" alt="Nomad iPhone 充电钱包"/></a>
+                            <p class="tit"><a href="#">Nomad iPhone 充电钱包</a></p>
+                            <p class="price">959.00元</p>
+                        </li>
+                        <li>
+                        	<a href="picList.html"><img src="images/561dedcc5a9f2.jpg" alt="Nomad iPhone 充电钱包"/></a>
+                            <p class="tit"><a href="#">Nomad iPhone 充电钱包</a></p>
+                            <p class="price">959.00元</p>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+                </div>
+            </div>
+            
+        </aside>
+        </div>
+    </div> 
+  </div>
+  <!--end main-->
+  
+  <div class="footer" id="frame_footer" role="contentinfo" include="include.html">
+    <div class="subnav clearfix" id="frame_footer_subnav">
+       <div class="row margin-b hide-for-small clearfix" id="frame_footer_1">
+          <div class="left" id="data_subnav_1"> 
+            <img src="images/lph-footer-logo.png" alt="雷锋网"/>
+          </div>
+          <div class="right" id="data_subnav_2"> 
+            <a href="#">联系我们</a><span>|</span>
+            <a href="#">关于我们</a><span>|</span>
+            <a href="#">投稿</a><span>|</span>
+            <a href="#">加入我们</a>
+            <a href="#" class="weibo"></a>
+            <a href="#" class="youxiang"></a>
+          </div>
+       </div>
+       <div class="row margin-t margin-b" id="frame_footer_2">
+            <div class="link" id="frame_footer_link">
+                <div class="youqing"><p class="left">友情链接：</p></div>
+                <a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a><a href="#">网易数码</a><a href="#">搜狐IT</a><a href="#">网易数码</a>
+            </div>
+    	</div>
+    </div>
+    <!---->
+    <div class="copyright" id="frame_footer_copyright">
+        <div class="row" id="data_copyright"> Copyright © 2013-2015  www.xxxxx.com</div>
+    </div>
+  </div>
+  <!--end footer--> 
+  
+  <div id="frame_javascript">
+  	<div id="data_javascript">
+		<script src="javascript/foundation.min.js"></script> 
+        <script src="javascript/main.js"></script>
+        <script src="javascript/others.js"></script> 
+        <!--焦点图js-->
+        <script src="javascript/idangerous.swiper-2.0.min.js"></script>
+		<script src="javascript/movies-app.js"></script>
+
+		<script>
+		  $('.media_img a.weixin').on('click',function(){
+			  $(this).css('left','0'); 
+		  });
+		  $('.media_img a.weixin').on('blur',function(){
+			  $(this).css('left','50%'); 
+		  });
+		  $('#reflash').on('click',function(){
+			  $('.change_1').toggle();
+			  $('.change_2').toggle();  
+		  });
+		  $(document).foundation();
+		</script>
+    </div>
+  </div>
+</div>
+</div>
+
+
+</body>
+</html>
